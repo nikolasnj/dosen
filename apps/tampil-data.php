@@ -10,7 +10,7 @@
     </head>
     <body>
     <?php
-    include 'koneksi/koneksi.php';
+    include '../koneksi/koneksi.php';
 
     if (isset($_POST['cari'])) {
         $keyword = $_POST['keyword'];
@@ -18,7 +18,7 @@
     }else {
         $sql = "SELECT * FROM dosen";
     }
-    ;
+    
     $query = mysqli_query($koneksi, $sql);
     $row = mysqli_fetch_all($query, MYSQLI_BOTH);
     ?>
@@ -78,8 +78,8 @@
         <?php } ?>
     </table>
     <br>
-    <a href="APP/form-tambah.php">
-        <button class="w3-button w3-dark-gray w3-round-xlarge">Tamabah Data</button>
+    <a href="form-tambahdata.php">
+        <button class="w3-button w3-dark-gray w3-round-xlarge">Tambah Data</button>
     </a>
     <br>
     </body>
